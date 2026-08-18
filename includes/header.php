@@ -45,7 +45,7 @@ function render_header(array $opts = []): void {
 <script src="<?= assets('js/app.js') ?>" defer></script>
 </head>
 <body class="<?= e($bodyClass) ?>">
-<a href="#main" class="skip-link">Skip to content</a>
+<!-- <a href="#main" class="skip-link">Skip to content</a> -->
 
 <!-- CLEAN TOP ANNOUNCEMENT STRIP -->
 <div class="top-bar" id="topBar">

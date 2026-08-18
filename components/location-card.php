@@ -1,21 +1,50 @@
 <?php
-// Location card component.
+// Luxury Location Card with Vibrant City Header & Action Buttons.
 
 function render_location_card(array $loc): void {
+    $isDwarka = strpos($loc['slug'], 'dwarka') !== false;
+    $themeClass = $isDwarka ? 'lc-theme--dwarka' : 'lc-theme--gurgaon';
     ?>
-<a class="card location-card reveal" href="<?= url($loc['slug']) ?>">
-  <div class="lc-img"><img src="<?= e(imageData($loc['image'])) ?>" alt="<?= e(SITE_NAME) ?> — <?= e($loc['name']) ?> clinic" width="640" height="360" loading="lazy"></div>
-  <div>
-    <div class="lc-city"><?= e($loc['city']) ?></div>
-    <h3><?= e($loc['name']) ?></h3>
+<div class="card location-card <?= e($themeClass) ?> reveal">
+  <div class="lc-img-box">
+    <img src="<?= e(imageData($loc['image'])) ?>" alt="<?= e(SITE_NAME) ?> — <?= e($loc['name']) ?> clinic" width="640" height="360" loading="lazy">
+    <div class="lc-badge-top">
+      <span class="pulse-dot"></span>
+      <span>Open Today 9 AM – 9 PM</span>
+    </div>
+    <div class="lc-city-tag"><?= e($loc['city']) ?> CLINIC</div>
   </div>
-  <div class="lc-row"><?= icon('pin') ?><span><?= e($loc['address']) ?></span></div>
-  <div class="lc-row"><?= icon('clock') ?><span><?= e($loc['hours']) ?></span></div>
-  <div class="lc-row"><?= icon('phone') ?><span><?= e($loc['phone']) ?></span></div>
-  <div class="lc-actions">
-    <span class="btn btn--ghost btn--sm"><?= icon('pin') ?> Get Directions</span>
-    <span class="btn btn--accent btn--sm">Explore Clinic <?= icon('arrow') ?></span>
+
+  <div class="lc-body">
+    <div class="lc-title-row">
+      <h3><?= e($loc['name']) ?></h3>
+      <span class="lc-rating-pill">★ 4.9 (Google)</span>
+    </div>
+
+    <div class="lc-info-stack">
+      <div class="lc-info-item">
+        <span class="lc-icon-capsule"><?= icon('pin') ?></span>
+        <span><?= e($loc['address']) ?></span>
+      </div>
+      <div class="lc-info-item">
+        <span class="lc-icon-capsule"><?= icon('clock') ?></span>
+        <span><strong><?= e($loc['hours']) ?></strong> (All 7 Days)</span>
+      </div>
+      <div class="lc-info-item">
+        <span class="lc-icon-capsule"><?= icon('phone') ?></span>
+        <span><a href="<?= telLink($loc['phone_tel']) ?>" class="lc-tel-link"><?= e($loc['phone']) ?></a></span>
+      </div>
+    </div>
+
+    <div class="lc-actions">
+      <a href="<?= e($loc['map_link']) ?>" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">
+        <?= icon('pin') ?> <span>Directions</span>
+      </a>
+      <a href="<?= url($loc['slug']) ?>" class="btn btn--accent btn--sm">
+        <span>Explore Clinic</span> <?= icon('arrow') ?>
+      </a>
+    </div>
   </div>
-</a>
+</div>
 <?php
 }
