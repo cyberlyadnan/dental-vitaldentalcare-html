@@ -22,7 +22,7 @@ const PRIMARY_COLOR    = '#0B2545';
 const ACCENT_COLOR     = '#1F8A8A';
 
 // Build version for cache busting
-const ASSET_VERSION    = '2.9.0';
+const ASSET_VERSION    = '3.2.0';
 
 // Enables future PHP appointment handler. False keeps the form frontend-only.
 const APPOINTMENT_HANDLER_ENABLED = false;

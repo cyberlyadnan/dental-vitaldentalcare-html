@@ -6,8 +6,9 @@ function render_trust_bar(): void {
 <section class="trust-section" id="trust">
   <div class="container container--wide">
     <div class="trust-grid reveal">
-      <!-- Item 1: Rating -->
-      <div class="trust-card">
+      <!-- Item 1: Rating (Gold / Amber) -->
+      <div class="trust-card trust-card--gold">
+        <div class="tc-top-accent"></div>
         <div class="tc-icon-wrap tc-icon-wrap--gold">
           <?= icon('star') ?>
         </div>
@@ -18,8 +19,9 @@ function render_trust_bar(): void {
         </div>
       </div>
 
-      <!-- Item 2: Smiles -->
-      <div class="trust-card">
+      <!-- Item 2: Smiles (Cyan / Teal) -->
+      <div class="trust-card trust-card--teal">
+        <div class="tc-top-accent"></div>
         <div class="tc-icon-wrap tc-icon-wrap--teal">
           <?= icon('smile') ?>
         </div>
@@ -30,8 +32,9 @@ function render_trust_bar(): void {
         </div>
       </div>
 
-      <!-- Item 3: Experience -->
-      <div class="trust-card">
+      <!-- Item 3: Experience (Royal Sapphire) -->
+      <div class="trust-card trust-card--navy">
+        <div class="tc-top-accent"></div>
         <div class="tc-icon-wrap tc-icon-wrap--navy">
           <?= icon('shield') ?>
         </div>
@@ -42,8 +45,9 @@ function render_trust_bar(): void {
         </div>
       </div>
 
-      <!-- Item 4: Sterilization -->
-      <div class="trust-card">
+      <!-- Item 4: Sterilization (Emerald Green) -->
+      <div class="trust-card trust-card--green">
+        <div class="tc-top-accent"></div>
         <div class="tc-icon-wrap tc-icon-wrap--green">
           <?= icon('sterile') ?>
         </div>
@@ -55,15 +59,24 @@ function render_trust_bar(): void {
       </div>
     </div>
 
-    <!-- Micro Assurance Strip -->
+    <!-- Micro Assurance Grid / Strip -->
     <div class="trust-strip reveal reveal-delay-1">
-      <span class="ts-item"><?= icon('check') ?> 2 Modern Clinic Locations</span>
-      <span class="ts-dot" aria-hidden="true">•</span>
-      <span class="ts-item"><?= icon('clock') ?> Open 7 Days (9 AM – 9 PM)</span>
-      <span class="ts-dot" aria-hidden="true">•</span>
-      <span class="ts-item"><?= icon('alert') ?> Same-Day Emergency Slots</span>
-      <span class="ts-dot" aria-hidden="true">•</span>
-      <span class="ts-item"><?= icon('shield') ?> 0% Interest EMI Available</span>
+      <div class="ts-item ts-item--teal">
+        <span class="ts-icon-pill"><?= icon('pin') ?></span>
+        <span class="ts-text">2 Modern Clinics <small>(Dwarka &amp; Gurgaon)</small></span>
+      </div>
+      <div class="ts-item ts-item--blue">
+        <span class="ts-icon-pill"><?= icon('clock') ?></span>
+        <span class="ts-text">Open 7 Days <small>(9 AM – 9 PM)</small></span>
+      </div>
+      <div class="ts-item ts-item--amber">
+        <span class="ts-icon-pill"><?= icon('alert') ?></span>
+        <span class="ts-text">Same-Day Emergency Slots</span>
+      </div>
+      <div class="ts-item ts-item--green">
+        <span class="ts-icon-pill"><?= icon('shield') ?></span>
+        <span class="ts-text">0% Interest EMI Available</span>
+      </div>
     </div>
   </div>
 </section>

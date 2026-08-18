@@ -212,25 +212,38 @@ if ($route === '') {
         <div class="section-head center reveal">
           <span class="eyebrow">Why Vital Dental Care</span>
           <h2>Care built around safety, comfort and expertise</h2>
+          <p class="lede" style="color:rgba(224,242,254,0.9);margin-inline:auto">Every treatment is delivered with surgical precision, European-grade sterilization, and compassionate pain-free care.</p>
         </div>
-        <div class="grid grid-4">
-          <div class="feature-block reveal">
-            <span class="icon-chip icon-chip--specialist"><?= icon('shield') ?></span>
+        <div class="why-grid">
+          <div class="why-card why-card--specialist reveal">
+            <div class="why-card-top">
+              <span class="icon-chip icon-chip--specialist"><?= icon('shield') ?></span>
+              <span class="why-pill">MDS Specialist</span>
+            </div>
             <h3>MDS Specialist Team</h3>
             <p>Treatments are delivered by qualified specialists with masters-level training in their fields.</p>
           </div>
-          <div class="feature-block reveal reveal-delay-1">
-            <span class="icon-chip icon-chip--laser"><?= icon('laser') ?></span>
+          <div class="why-card why-card--laser reveal reveal-delay-1">
+            <div class="why-card-top">
+              <span class="icon-chip icon-chip--laser"><?= icon('laser') ?></span>
+              <span class="why-pill">Pain-Free Tech</span>
+            </div>
             <h3>Advanced Laser Dentistry</h3>
             <p>Laser-assisted procedures for gums and soft tissue that aim for less discomfort and faster healing.</p>
           </div>
-          <div class="feature-block reveal reveal-delay-2">
-            <span class="icon-chip icon-chip--sterile"><?= icon('sterile') ?></span>
+          <div class="why-card why-card--sterile reveal reveal-delay-2">
+            <div class="why-card-top">
+              <span class="icon-chip icon-chip--sterile"><?= icon('sterile') ?></span>
+              <span class="why-pill">Hospital Grade</span>
+            </div>
             <h3>Class B Sterilisation</h3>
             <p>Hospital-grade vacuum autoclaves and multi-step protocols keep every instrument safe.</p>
           </div>
-          <div class="feature-block reveal reveal-delay-3">
-            <span class="icon-chip icon-chip--rct"><?= icon('tooth') ?></span>
+          <div class="why-card why-card--rct reveal reveal-delay-3">
+            <div class="why-card-top">
+              <span class="icon-chip icon-chip--rct"><?= icon('tooth') ?></span>
+              <span class="why-pill">Single Visit</span>
+            </div>
             <h3>Single-Sitting RCT</h3>
             <p>Advanced root canal treatment completed in a single sitting where clinically appropriate.</p>
           </div>
