@@ -59,6 +59,38 @@ if ($route === '') {
     render_trust_bar();
     ?>
 
+    <!-- WELCOME STORY & CLINIC INTRODUCTION -->
+    <section class="section" id="about-intro">
+      <div class="container">
+        <div class="welcome-split">
+          <div class="welcome-img-frame reveal">
+            <img src="<?= e(imageData('clinic_welcome')) ?>" alt="Vital Dental Care Clinic Dwarka & Gurgaon" width="600" height="400" loading="lazy">
+            <div class="welcome-badge-float">
+              <?= icon('award') ?>
+              <div>
+                <div>10+ Years Excellence</div>
+                <div style="font-size:0.7rem;font-weight:400;opacity:0.8">500+ Root Canals &amp; Implants</div>
+              </div>
+            </div>
+          </div>
+          <div class="welcome-text reveal reveal-delay-1">
+            <span class="eyebrow">Welcome to Vital Dental Care</span>
+            <h2>Top-Rated Dental Clinics in Dwarka Sector 6 &amp; Gurugram Sector 65</h2>
+            <p class="lede" style="margin-bottom:var(--sp-4)">
+              Our clinics are strategically located in <strong>Dwarka Sector 6 (Delhi)</strong> and <strong>M3M 65th Avenue (Gurgaon)</strong> with ample parking space and state-of-the-art dental operatories.
+            </p>
+            <p style="color:var(--text-soft);line-height:1.65;margin-bottom:var(--sp-5)">
+              Led by Dr. Anurag Khandelwal and a highly qualified MDS specialist team, Vital Dental Care provides comprehensive general, cosmetic, and pediatric dentistry. We utilize high-resolution intraoral cameras, 3D digital imaging, and uncompromising European-grade materials to ensure every procedure is precise, comfortable, and pain-managed.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="<?= url('about-us') ?>" class="btn btn--ghost">Read Our Story <?= icon('arrow') ?></a>
+              <a href="<?= url('book-appointment') ?>" class="btn btn--accent">Book a Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- LOCATIONS -->
     <section class="section section--alt" id="locations">
       <div class="container">
@@ -79,7 +111,7 @@ if ($route === '') {
         <div class="section-head center reveal">
           <span class="eyebrow">Complete dental care</span>
           <h2>Complete Dental Care, Under One Roof</h2>
-          <p class="lede">From preventive care to advanced restorative and cosmetic dentistry.</p>
+          <p class="lede">From preventive scaling to advanced restorative, orthodontic and implant dentistry.</p>
         </div>
         <div class="grid grid-3">
           <?php
@@ -92,13 +124,62 @@ if ($route === '') {
           ?>
         </div>
         <div class="text-center mt-7">
-          <a href="<?= url('dental-treatment-cost-delhi') ?>" class="btn btn--ghost btn--lg">View all treatments & pricing <?= icon('arrow') ?></a>
+          <a href="<?= url('dental-treatment-cost-delhi') ?>" class="btn btn--ghost btn--lg">View all treatments &amp; pricing <?= icon('arrow') ?></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPORTANCE OF SPECIALIZED DENTAL PROCEDURES -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Specialized Expertise</span>
+          <h2>Why Specialist Care Matters</h2>
+          <p class="lede">Advanced techniques and specialized training for lasting dental health.</p>
+        </div>
+        <div class="importance-grid">
+          <div class="importance-card reveal">
+            <div class="importance-card-img">
+              <img src="<?= e(imageData('treatment_gum')) ?>" alt="Importance of Periodontics" loading="lazy">
+            </div>
+            <div class="importance-card-body">
+              <h3>Importance of Periodontics</h3>
+              <p>Gum health is the foundation of every healthy smile. Periodontics prevents chronic inflammation, bone loss, and systemic health complications through laser gum care and specialized scaling.</p>
+            </div>
+          </div>
+          <div class="importance-card reveal reveal-delay-1">
+            <div class="importance-card-img">
+              <img src="<?= e(imageData('treatment_implants')) ?>" alt="Importance of Dental Implants" loading="lazy">
+            </div>
+            <div class="importance-card-body">
+              <h3>Importance of Dental Implants</h3>
+              <p>Unlike traditional dentures, titanium implants fuse directly with the jawbone to stop bone loss, preserve natural facial structure, and restore 100% natural biting power.</p>
+            </div>
+          </div>
+          <div class="importance-card reveal reveal-delay-2">
+            <div class="importance-card-img">
+              <img src="<?= e(imageData('treatment_braces')) ?>" alt="Importance of Orthodontics" loading="lazy">
+            </div>
+            <div class="importance-card-body">
+              <h3>Importance of Orthodontics &amp; Aligners</h3>
+              <p>Proper teeth alignment is essential for long-term oral hygiene, correct speech, balanced bite function, and preventing premature tooth wear or jaw pain.</p>
+            </div>
+          </div>
+          <div class="importance-card reveal reveal-delay-3">
+            <div class="importance-card-img">
+              <img src="<?= e(imageData('treatment_laser')) ?>" alt="Importance of Laser Dentistry" loading="lazy">
+            </div>
+            <div class="importance-card-body">
+              <h3>Importance of Laser Dentistry</h3>
+              <p>Minimally invasive laser wavelengths sterilize bacterial pockets, reduce post-op swelling, eliminate needle anxiety, and allow rapid healing for root canals and soft tissue surgeries.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- FEATURED: DENTAL IMPLANTS -->
-    <section class="section section--alt">
+    <section class="section">
       <div class="container">
         <div class="featured-split">
           <div class="fs-img reveal">
@@ -109,10 +190,10 @@ if ($route === '') {
             <h2>Replace Missing Teeth With Confidence</h2>
             <p class="lede">Dental implants provide a long-lasting, natural-feeling replacement for missing teeth — designed to restore both function and the look of your smile.</p>
             <ul class="fs-benefits">
-              <li><?= icon('check') ?> Titanium implants that integrate with your jaw</li>
-              <li><?= icon('check') ?> Custom crowns matched to your natural teeth</li>
-              <li><?= icon('check') ?> Performed by an experienced implantologist</li>
-              <li><?= icon('check') ?> <strong>Personalized pricing</strong> — confirmed at your consultation</li>
+              <li><?= icon('check') ?> Titanium implants that integrate securely with your jaw</li>
+              <li><?= icon('check') ?> Custom crowns matched to your natural tooth shade</li>
+              <li><?= icon('check') ?> Performed by a certified Fellow in Implantology</li>
+              <li><?= icon('check') ?> <strong>Personalized pricing &amp; 0% EMI options</strong></li>
             </ul>
             <div class="flex flex-wrap gap-3">
               <a href="<?= url('dental-implants-dwarka') ?>" class="btn btn--accent">Explore Dental Implants <?= icon('arrow') ?></a>
@@ -124,7 +205,7 @@ if ($route === '') {
     </section>
 
     <!-- WHY VITAL -->
-    <section class="section">
+    <section class="section section--alt">
       <div class="container">
         <div class="section-head center reveal">
           <span class="eyebrow">Why Vital Dental Care</span>
@@ -143,8 +224,8 @@ if ($route === '') {
           </div>
           <div class="feature-block reveal reveal-delay-2">
             <span class="icon-chip icon-chip--navy"><?= icon('sterile') ?></span>
-            <h3>High-Standard Sterilisation</h3>
-            <p>A Class B sterilizer and strict protocols help keep every instrument safe for every patient.</p>
+            <h3>Class B Sterilisation</h3>
+            <p>Hospital-grade vacuum autoclaves and multi-step protocols keep every instrument safe.</p>
           </div>
           <div class="feature-block reveal reveal-delay-3">
             <span class="icon-chip icon-chip--navy"><?= icon('tooth') ?></span>
@@ -165,8 +246,8 @@ if ($route === '') {
         </div>
         <div class="tech-gallery reveal">
           <div class="tg-item tg-item--lg">
-            <img src="<?= e(imageData('hero_detail')) ?>" alt="Dental clinic technology" loading="lazy">
-            <span class="tg-label">Intraoral Camera</span>
+            <img src="<?= e(imageData('clinic_photo_1')) ?>" alt="Vital Dental Care modern clinic operatory" loading="lazy">
+            <span class="tg-label">Modern Operatory</span>
           </div>
           <div class="tg-item">
             <img src="<?= e(imageData('treatment_laser')) ?>" alt="Laser dentistry" loading="lazy">
@@ -178,10 +259,10 @@ if ($route === '') {
           </div>
           <div class="tg-item">
             <img src="<?= e(imageData('treatment_scaling')) ?>" alt="Modern dental instruments" loading="lazy">
-            <span class="tg-label">Modern Instruments</span>
+            <span class="tg-label">Ultrasonic Scaling</span>
           </div>
           <div class="tg-item">
-            <img src="<?= e(imageData('clinic_dwarka')) ?>" alt="Sterilisation" loading="lazy">
+            <img src="<?= e(imageData('clinic_photo_2')) ?>" alt="Sterilisation room" loading="lazy">
             <span class="tg-label">Class B Sterilizer</span>
           </div>
         </div>
@@ -202,24 +283,25 @@ if ($route === '') {
       </div>
     </section>
 
-    <!-- PATIENT RESULTS -->
+    <!-- PATIENT RESULTS / SMILE GALLERY -->
     <section class="section section--alt">
       <div class="container">
         <div class="section-head center reveal">
           <span class="eyebrow">Smile gallery</span>
           <h2>Real Patients. Real Transformations.</h2>
-          <p class="lede">A selection of treatment outcomes from our clinics. <a href="<?= url('smile-gallery') ?>">View the full gallery →</a></p>
+          <p class="lede">A selection of actual clinical outcomes from our clinics. <a href="<?= url('smile-gallery') ?>">View all cases &amp; clinic photos →</a></p>
         </div>
-        <div class="grid grid-3">
+        <div class="grid grid-4">
           <?php
-          $cases = [
-            ['img' => 'gallery_1', 'tag' => 'Implants'],
-            ['img' => 'gallery_2', 'tag' => 'Smile Makeover'],
-            ['img' => 'gallery_3', 'tag' => 'Orthodontics'],
+          $homeCases = [
+            ['img' => 'gallery_1', 'tag' => 'Porcelain Veneers'],
+            ['img' => 'gallery_2', 'tag' => 'Full Mouth Implants'],
+            ['img' => 'gallery_3', 'tag' => 'Clear Aligners'],
+            ['img' => 'gallery_4', 'tag' => 'Laser Whitening'],
           ];
-          foreach ($cases as $c): ?>
+          foreach ($homeCases as $c): ?>
           <div class="ba-card reveal">
-            <div class="ba-img"><img src="<?= e(imageData($c['img'])) ?>" alt="<?= e($c['tag']) ?> case" loading="lazy"></div>
+            <div class="ba-img"><img src="<?= e(imageData($c['img'])) ?>" alt="<?= e($c['tag']) ?> result" loading="lazy"></div>
             <div class="ba-meta"><span class="ba-tag"><?= e($c['tag']) ?></span></div>
           </div>
           <?php endforeach; ?>
@@ -227,13 +309,66 @@ if ($route === '') {
       </div>
     </section>
 
-    <!-- TESTIMONIALS -->
+    <!-- VIDEO TESTIMONIALS -->
     <section class="section">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Video Stories</span>
+          <h2>Putting Smiles Through: Patient Video Stories</h2>
+          <p class="lede">Watch real Vital Dental Care patients share their treatment journeys.</p>
+        </div>
+        <div class="grid grid-4">
+          <a href="https://youtu.be/PiMgnnFbbUc" target="_blank" rel="noopener" class="video-card reveal">
+            <div class="video-thumb">
+              <img src="<?= e(imageData('video_thumb_1')) ?>" alt="Patient Video Review" loading="lazy">
+              <span class="play-btn-overlay"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
+            </div>
+            <div class="video-info">
+              <h4>Patient Experience</h4>
+              <p>Painless Root Canal &amp; Restorations</p>
+            </div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=R2tT_QuQKcU" target="_blank" rel="noopener" class="video-card reveal reveal-delay-1">
+            <div class="video-thumb">
+              <img src="<?= e(imageData('video_thumb_2')) ?>" alt="Patient Video Review" loading="lazy">
+              <span class="play-btn-overlay"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
+            </div>
+            <div class="video-info">
+              <h4>Dental Implants Story</h4>
+              <p>Smooth, surgical precision treatment</p>
+            </div>
+          </a>
+          <a href="https://youtu.be/VIrfRHIElyY" target="_blank" rel="noopener" class="video-card reveal reveal-delay-2">
+            <div class="video-thumb">
+              <img src="<?= e(imageData('video_thumb_3')) ?>" alt="Patient Video Review" loading="lazy">
+              <span class="play-btn-overlay"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
+            </div>
+            <div class="video-info">
+              <h4>Orthodontic Journey</h4>
+              <p>Braces &amp; Clear Aligner confidence</p>
+            </div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=SU2ruo1Mi-g" target="_blank" rel="noopener" class="video-card reveal reveal-delay-3">
+            <div class="video-thumb">
+              <img src="<?= e(imageData('video_thumb_4')) ?>" alt="Patient Video Review" loading="lazy">
+              <span class="play-btn-overlay"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
+            </div>
+            <div class="video-info">
+              <h4>Smile Makeover</h4>
+              <p>Complete aesthetic smile transformation</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section section--alt">
       <div class="container">
         <div class="section-head center reveal">
           <span class="eyebrow">Patient reviews</span>
           <h2>What Our Patients Say</h2>
-          <p class="lede">Rated 4.9★ on Google. <a href="<?= url('patient-reviews') ?>">Read more reviews →</a></p>
+          <p class="lede">Rated 4.9★ on Google across 500+ verified patient visits. <a href="<?= url('patient-reviews') ?>">Read all reviews →</a></p>
         </div>
         <div class="grid grid-3">
           <?php foreach ($reviews as $r) render_review_card($r); ?>
@@ -684,18 +819,28 @@ if ($route === 'dental-treatment-cost-delhi' || $route === 'pricing') {
 if ($route === 'smile-gallery') {
     setSEO([
         'title'       => 'Smile Gallery & Patient Results · Vital Dental Care',
-        'description' => 'View before and after treatment transformations achieved by our specialist dental team.',
+        'description' => 'View before and after treatment transformations and modern clinic facilities at Vital Dental Care.',
         'canonical'   => SITE_URL . '/smile-gallery',
     ]);
 
     render_header();
     $cases = [
-        ['img' => 'gallery_1', 'tag' => 'Dental Implants', 'desc' => 'Full arch restoration with titanium implants and zirconia crowns.'],
-        ['img' => 'gallery_2', 'tag' => 'Smile Makeover', 'desc' => 'Porcelain veneers and cosmetic contouring for symmetrical aesthetics.'],
-        ['img' => 'gallery_3', 'tag' => 'Orthodontics', 'desc' => 'Clear aligner treatment correcting crowding and bite alignment.'],
+        ['img' => 'gallery_1', 'tag' => 'Porcelain Veneers', 'desc' => 'Aesthetic smile redesign with porcelain veneers and shade balancing.'],
+        ['img' => 'gallery_2', 'tag' => 'Dental Implants', 'desc' => 'Full arch restoration with titanium implants and custom crowns.'],
+        ['img' => 'gallery_3', 'tag' => 'Clear Aligners', 'desc' => 'Invisalign orthodontic alignment correcting bite and spacing.'],
         ['img' => 'gallery_4', 'tag' => 'Laser Whitening', 'desc' => 'In-clinic laser teeth whitening with multi-shade brightening.'],
-        ['img' => 'gallery_5', 'tag' => 'Ceramic Crowns', 'desc' => 'Natural-looking ceramic crown replacement following root canal treatment.'],
-        ['img' => 'gallery_6', 'tag' => 'Gum Contouring', 'desc' => 'Laser aesthetic gum reshaping for a balanced, confident smile.'],
+        ['img' => 'gallery_5', 'tag' => 'Single-Sitting RCT', 'desc' => 'Precision root canal therapy topped with a durable zirconia crown.'],
+        ['img' => 'gallery_6', 'tag' => 'Gum Contouring', 'desc' => 'Laser aesthetic gingival recontouring for a balanced smile line.'],
+        ['img' => 'gallery_7', 'tag' => 'Composite Bonding', 'desc' => 'Seamless cosmetic repair of chipped and worn enamel.'],
+        ['img' => 'gallery_8', 'tag' => 'Crowns & Bridges', 'desc' => 'Custom metal-free ceramic bridge restoring chewing functionality.'],
+    ];
+    $clinicPhotos = [
+        ['img' => 'clinic_photo_1', 'caption' => 'Dwarka Sector 6 Operatory & Dental Chair'],
+        ['img' => 'clinic_photo_2', 'caption' => 'Sterilisation Room & Class B Autoclave'],
+        ['img' => 'clinic_photo_3', 'caption' => 'Gurgaon M3M Avenue Consultation Room'],
+        ['img' => 'clinic_photo_4', 'caption' => 'High-Resolution Intraoral Diagnostic Setup'],
+        ['img' => 'clinic_photo_5', 'caption' => 'Reception & Patient Waiting Lounge'],
+        ['img' => 'clinic_photo_6', 'caption' => 'Treatment Room & Digital X-Ray Setup'],
     ];
     ?>
     <main id="main">
@@ -706,20 +851,48 @@ if ($route === 'smile-gallery') {
               ['name' => 'Smile Gallery', 'url' => 'smile-gallery'],
           ]) ?>
           <span class="eyebrow">Real Transformations</span>
-          <h1>Smile Gallery</h1>
-          <p class="lede">See how our dental specialists help patients restore healthy, confident smiles.</p>
+          <h1>Smile Gallery &amp; Clinic Facilities</h1>
+          <p class="lede">Explore real patient treatment transformations and take a look inside our high-tech clinics in Dwarka and Gurgaon.</p>
         </div>
       </section>
 
+      <!-- CLINICAL CASES -->
       <section class="section">
         <div class="container">
-          <div class="grid grid-3">
+          <div class="section-head reveal">
+            <span class="eyebrow">Patient Outcomes</span>
+            <h2>Clinical Smile Transformations</h2>
+          </div>
+          <div class="grid grid-4">
             <?php foreach ($cases as $c): ?>
             <div class="ba-card reveal">
               <div class="ba-img"><img src="<?= e(imageData($c['img'])) ?>" alt="<?= e($c['tag']) ?>" loading="lazy"></div>
               <div class="ba-meta">
                 <span class="ba-tag badge"><?= e($c['tag']) ?></span>
                 <p class="mt-2" style="font-size:var(--fs-xs);color:var(--text-soft)"><?= e($c['desc']) ?></p>
+              </div>
+            </div>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLINIC INFRASTRUCTURE & OPERATORIES -->
+      <section class="section section--alt">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Our Facilities</span>
+            <h2>Inside Our Clinics in Dwarka &amp; Gurgaon</h2>
+            <p class="lede">Hygienic, welcoming spaces equipped with the latest dental technology for your safety and comfort.</p>
+          </div>
+          <div class="grid grid-3">
+            <?php foreach ($clinicPhotos as $cp): ?>
+            <div class="card reveal" style="padding:0;overflow:hidden">
+              <div style="aspect-ratio:16/10;overflow:hidden">
+                <img src="<?= e(imageData($cp['img'])) ?>" alt="<?= e($cp['caption']) ?>" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+              </div>
+              <div style="padding:var(--sp-4)">
+                <h4 style="font-size:var(--fs-sm);margin:0;color:var(--primary-ink)"><?= e($cp['caption']) ?></h4>
               </div>
             </div>
             <?php endforeach; ?>
@@ -802,16 +975,32 @@ if ($route === 'about-us') {
 
       <section class="section">
         <div class="container">
+          <div class="welcome-split mb-8">
+            <div class="welcome-img-frame reveal">
+              <img src="<?= e(imageData('clinic_welcome')) ?>" alt="Vital Dental Care Clinic Dwarka & Gurgaon" width="600" height="400" loading="lazy">
+            </div>
+            <div class="reveal reveal-delay-1">
+              <span class="eyebrow">Our Story</span>
+              <h2>A Legacy of Painless, Specialist-Led Dental Care</h2>
+              <p class="lede" style="margin-bottom:var(--sp-3)">
+                Founded by Dr. Anurag Khandelwal, Vital Dental Care has grown into one of Delhi NCR's most trusted multispeciality dental centers.
+              </p>
+              <p style="color:var(--text-soft);line-height:1.65">
+                Our clinics in Dwarka Sector 6 and Gurgaon Sector 65 were established to offer patients a warm, hospital-sterile environment where advanced root canal treatments, implants, clear aligners, and cosmetic smile makeovers are performed with precision and genuine personal empathy.
+              </p>
+            </div>
+          </div>
+
           <div class="split">
             <div class="prose">
-              <h2>Our Philosophy</h2>
-              <p>At Vital Dental Care, we believe that great dental care starts with listening. We take time to understand your concerns, explain all treatment options with clarity, and recommend conservative solutions tailored to your long-term oral health.</p>
+              <h2>Our Clinical Philosophy</h2>
+              <p>At Vital Dental Care, we believe that great dental care starts with listening. We take time to understand your concerns, explain all treatment options with complete transparency, and recommend conservative solutions tailored to your long-term oral health.</p>
               
-              <h2 class="mt-6">Strict Sterilisation Standards</h2>
-              <p>Patient safety is paramount. Our clinics are equipped with Class B vacuum autoclaves, ensuring hospital-grade sterilization for every instrument. Disposable barriers and non-contact protocols are rigorously enforced.</p>
+              <h2 class="mt-6">Strict Hospital-Grade Sterilisation Standards</h2>
+              <p>Patient safety is paramount. Our clinics are equipped with Class B vacuum autoclaves, ensuring 100% sterilization for every instrument. Disposable barriers and non-contact protocols are rigorously enforced before every appointment.</p>
               
-              <h2 class="mt-6">Two State-of-the-Art Clinics</h2>
-              <p>Conveniently located in Dwarka Sector 6 (Delhi) and Gurgaon Sector 65 (Gurugram), both facilities feature digital X-rays, intraoral cameras, and laser dental systems.</p>
+              <h2 class="mt-6">Two Convenient Modern Clinics</h2>
+              <p>Conveniently located in Dwarka Sector 6 (Delhi) and Gurgaon Sector 65 (Gurugram), both facilities feature digital X-rays, high-resolution intraoral cameras, and modern laser dental systems.</p>
             </div>
             <div>
               <div class="card">
@@ -823,6 +1012,43 @@ if ($route === 'about-us') {
                   <li><?= icon('clock') ?> <strong>Open 7 Days:</strong> 9:00 AM to 9:00 PM for your convenience</li>
                 </ul>
                 <a href="<?= url('book-appointment') ?>" class="btn btn--accent btn--block mt-5">Book an Appointment</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLINIC FACILITIES SHOWCASE -->
+      <section class="section section--alt">
+        <div class="container">
+          <div class="section-head center reveal">
+            <span class="eyebrow">Clinic Infrastructure</span>
+            <h2>State-of-the-Art Facilities</h2>
+            <p class="lede">Designed for comfort, privacy, and maximum clinical sterility.</p>
+          </div>
+          <div class="grid grid-3">
+            <div class="card reveal" style="padding:0;overflow:hidden">
+              <div style="aspect-ratio:16/10;overflow:hidden">
+                <img src="<?= e(imageData('clinic_photo_1')) ?>" alt="Operatory & Chair" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+              </div>
+              <div style="padding:var(--sp-4)">
+                <h4 style="font-size:var(--fs-sm);margin:0;color:var(--primary-ink)">Advanced Treatment Operatory</h4>
+              </div>
+            </div>
+            <div class="card reveal reveal-delay-1" style="padding:0;overflow:hidden">
+              <div style="aspect-ratio:16/10;overflow:hidden">
+                <img src="<?= e(imageData('clinic_photo_2')) ?>" alt="Sterilization Setup" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+              </div>
+              <div style="padding:var(--sp-4)">
+                <h4 style="font-size:var(--fs-sm);margin:0;color:var(--primary-ink)">Class B Sterilisation Room</h4>
+              </div>
+            </div>
+            <div class="card reveal reveal-delay-2" style="padding:0;overflow:hidden">
+              <div style="aspect-ratio:16/10;overflow:hidden">
+                <img src="<?= e(imageData('clinic_photo_5')) ?>" alt="Waiting Lounge" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+              </div>
+              <div style="padding:var(--sp-4)">
+                <h4 style="font-size:var(--fs-sm);margin:0;color:var(--primary-ink)">Welcoming Patient Lounge</h4>
               </div>
             </div>
           </div>

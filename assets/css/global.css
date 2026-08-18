@@ -1290,4 +1290,160 @@ strong { font-weight: 700; }
   .float-anim, .float-anim-reverse, .pulse-dot::after { animation: none !important; }
 }
 
+/* ---------- WELCOME CLINIC SECTION ---------- */
+.welcome-split {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(32px, 5vw, 60px);
+  align-items: center;
+}
+.welcome-img-frame {
+  position: relative;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: 0 20px 45px -10px rgba(7,25,58,0.18);
+  border: 3px solid #ffffff;
+}
+.welcome-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.welcome-badge-float {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(7,25,58,0.92);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: var(--r-md);
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---------- VIDEO TESTIMONIALS ---------- */
+.video-card {
+  display: block;
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  text-decoration: none;
+}
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.video-thumb {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: var(--navy-900);
+}
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.video-card:hover .video-thumb img {
+  transform: scale(1.05);
+}
+.play-btn-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  background: rgba(220,38,38,0.92);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.video-card:hover .play-btn-overlay {
+  transform: translate(-50%, -50%) scale(1.12);
+  background: #dc2626;
+}
+.video-info {
+  padding: var(--sp-4);
+}
+.video-info h4 {
+  font-size: var(--fs-md);
+  margin-bottom: 4px;
+  color: var(--primary-ink);
+}
+.video-info p {
+  font-size: var(--fs-xs);
+  color: var(--text-soft);
+  margin: 0;
+}
+
+/* ---------- IMPORTANCE PROCEDURES SECTION ---------- */
+.importance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-6);
+}
+.importance-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.importance-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.importance-card-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: var(--ivory-100);
+}
+.importance-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.importance-card-body {
+  padding: var(--sp-5);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.importance-card-body h3 {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--sp-2);
+  color: var(--primary-ink);
+}
+.importance-card-body p {
+  font-size: var(--fs-sm);
+  color: var(--text-soft);
+  line-height: 1.6;
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .welcome-split { grid-template-columns: 1fr; }
+  .importance-grid { grid-template-columns: 1fr; }
+}
+
+
 
