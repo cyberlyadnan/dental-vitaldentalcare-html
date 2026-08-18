@@ -41,14 +41,16 @@ function render_hero(): void {
         <!-- CTA Buttons & Rating -->
         <div class="hero-actions">
           <a href="<?= url('book-appointment') ?>" class="btn btn--accent btn--shimmer hero-main-btn">
-            <span>Book Free Consultation</span> <?= icon('arrow') ?>
+            <?= icon('check') ?> <span>Book Free Consultation</span> <?= icon('arrow') ?>
           </a>
-          <a href="<?= whatsappLink('Hi Vital Dental Care, I would like to book a consultation.') ?>" class="btn btn--whatsapp" target="_blank" rel="noopener">
-            <?= icon('whatsapp') ?> <span>WhatsApp</span>
-          </a>
-          <a href="<?= telLink() ?>" class="btn btn--ghost hero-call-btn">
-            <?= icon('phone') ?> <span>Call Clinic</span>
-          </a>
+          <div class="hero-sub-actions">
+            <a href="<?= whatsappLink('Hi Vital Dental Care, I would like to book a consultation.') ?>" class="btn btn--whatsapp hero-sub-btn" target="_blank" rel="noopener">
+              <?= icon('whatsapp') ?> <span>WhatsApp</span>
+            </a>
+            <a href="<?= telLink() ?>" class="btn btn--ghost hero-sub-btn hero-call-btn">
+              <?= icon('phone') ?> <span>Call Clinic</span>
+            </a>
+          </div>
         </div>
 
         <!-- Social Proof Micro Strip -->

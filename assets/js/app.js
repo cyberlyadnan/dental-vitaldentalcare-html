@@ -12,15 +12,35 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // Mobile nav
-  var toggle = document.querySelector('.nav-toggle');
-  var mobileNav = document.querySelector('.mobile-nav');
-  var closeBtn = document.querySelector('.mobile-nav .mn-close');
-  function openNav() { if (mobileNav) { mobileNav.classList.add('is-open'); mobileNav.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; if (toggle) toggle.setAttribute('aria-expanded', 'true'); } }
-  function closeNav() { if (mobileNav) { mobileNav.classList.remove('is-open'); mobileNav.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; if (toggle) toggle.setAttribute('aria-expanded', 'false'); } }
-  if (toggle) toggle.addEventListener('click', openNav);
-  if (closeBtn) closeBtn.addEventListener('click', closeNav);
-  if (mobileNav) mobileNav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeNav); });
+  // Mobile nav drawer
+  var mobileNav = document.getElementById('mobileNav') || document.querySelector('.mobile-nav');
+  var toggles = document.querySelectorAll('.nav-toggle, #navToggle');
+  var closeBtns = document.querySelectorAll('.mn-close, #navClose');
+  
+  function openNav() {
+    if (mobileNav) {
+      mobileNav.classList.add('is-open');
+      mobileNav.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      toggles.forEach(function(t) { t.setAttribute('aria-expanded', 'true'); });
+    }
+  }
+  function closeNav() {
+    if (mobileNav) {
+      mobileNav.classList.remove('is-open');
+      mobileNav.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      toggles.forEach(function(t) { t.setAttribute('aria-expanded', 'false'); });
+    }
+  }
+  
+  toggles.forEach(function(t) { t.addEventListener('click', openNav); });
+  closeBtns.forEach(function(btn) { btn.addEventListener('click', closeNav); });
+  if (mobileNav) {
+    mobileNav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', closeNav);
+    });
+  }
 
   // FAQ accordion
   document.querySelectorAll('.faq-item').forEach(function (item) {

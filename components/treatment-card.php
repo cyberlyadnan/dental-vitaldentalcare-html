@@ -3,26 +3,26 @@
 
 function render_treatment_card(array $t): void {
     $category = $t['category'] ?? 'General';
-    $catSlug = strtolower(preg_replace('/[^a-z0-9]/', '', $category));
+    $catSlug = strtolower(preg_replace('/[^a-zA-Z0-9]/', '', $category));
     $badgeClass = 'badge--' . $catSlug;
 
     // Quick feature badges per treatment type
-    $benefit1 = 'Specialist Led';
-    $benefit2 = 'Digital Imaging';
+    $benefit1 = 'MDS Specialist';
+    $benefit2 = 'Digital 3D Guided';
     if (!empty($t['technology'])) {
         $benefit1 = $t['technology'][0] ?? 'Advanced Tech';
         if (isset($t['technology'][1])) {
             $benefit2 = $t['technology'][1];
         }
     } elseif (!empty($t['quick_facts']['pain'])) {
-        $benefit2 = 'Painless Care';
+        $benefit2 = 'Painless Method';
     }
 
     $visitsInfo = $t['quick_facts']['visits'] ?? 'Personalized Care';
     if (stripos($visitsInfo, 'single') !== false) {
         $speedPill = '⚡ Single Sitting';
     } elseif (stripos($t['name'], 'invisalign') !== false || stripos($t['name'], 'align') !== false) {
-        $speedPill = '✨ Clear & Invisible';
+        $speedPill = '✨ Invisible Aligners';
     } elseif (stripos($t['name'], 'implant') !== false) {
         $speedPill = '🛡️ Lifetime Durable';
     } elseif (stripos($t['name'], 'whitening') !== false) {
@@ -44,7 +44,7 @@ function render_treatment_card(array $t): void {
 
   <div class="tc-content">
     <div class="tc-header">
-      <span class="tc-category-tag"><?= e($category) ?> Dentistry</span>
+      <span class="tc-category-tag"><?= e($category) ?> Care</span>
       <h3 class="tc-title"><?= e($t['name']) ?></h3>
     </div>
 
@@ -56,11 +56,10 @@ function render_treatment_card(array $t): void {
     </div>
 
     <div class="tc-footer">
-      <span class="tc-cta-btn">
-        <span>Explore Procedure</span>
-        <?= icon('arrow') ?>
-      </span>
-      <span class="tc-consult-pill">Consultation Available</span>
+      <div class="tc-cta-bar">
+        <span>Explore Treatment</span>
+        <span class="tc-cta-arrow"><?= icon('arrow') ?></span>
+      </div>
     </div>
   </div>
 </a>

@@ -114,18 +114,23 @@ function render_header(array $opts = []): void {
   </div>
 </header>
 
-<!-- SLIDE-IN MOBILE DRAWER -->
+<!-- SLIDE-IN MOBILE DRAWER (SIDEBAR) -->
 <div class="mobile-nav" id="mobileNav" aria-hidden="true">
   <div class="mn-head">
     <a class="brand" href="<?= url('') ?>">
       <span class="brand-mark"><?= icon('tooth') ?></span>
       <span class="brand-name">Vital <b>Dental Care</b></span>
     </a>
-    <button class="nav-toggle mn-close" aria-label="Close menu"><?= icon('close') ?></button>
+    <button class="nav-toggle mn-close" aria-label="Close menu" id="navClose"><?= icon('close') ?></button>
   </div>
   
-  <div class="mn-status-pill">
-    <span class="pulse-dot"></span> Open Today 9 AM – 9 PM · Dwarka &amp; Gurgaon
+  <div class="mn-top-cta">
+    <div class="mn-status-pill">
+      <span class="pulse-dot"></span> Open Today 9 AM – 9 PM · Dwarka &amp; Gurgaon
+    </div>
+    <a href="<?= url('book-appointment') ?>" class="btn btn--accent btn--block mn-book-btn">
+      <?= icon('check') ?> <span>Book Appointment Online</span> <?= icon('arrow') ?>
+    </a>
   </div>
 
   <div class="mn-body">
@@ -139,14 +144,13 @@ function render_header(array $opts = []): void {
       <a href="<?= url('about-us') ?>" class="mn-item"><?= icon('tooth') ?> <span>About Us</span></a>
       <a href="<?= url('patient-reviews') ?>" class="mn-item"><?= icon('star') ?> <span>Patient Reviews</span></a>
       <a href="<?= url('membership-plan') ?>" class="mn-item"><?= icon('award') ?> <span>Membership Plan</span></a>
-      <a href="<?= url('contact') ?>" class="mn-item"><?= icon('phone') ?> <span>Contact &amp; Book</span></a>
+      <a href="<?= url('contact') ?>" class="mn-item"><?= icon('phone') ?> <span>Contact &amp; Clinic Hours</span></a>
     </div>
   </div>
 
   <div class="mn-actions">
     <a href="<?= telLink() ?>" class="btn btn--ghost"><?= icon('phone') ?> Call Us</a>
     <a href="<?= whatsappLink() ?>" class="btn btn--whatsapp" target="_blank" rel="noopener"><?= icon('whatsapp') ?> WhatsApp</a>
-    <a href="<?= url('book-appointment') ?>" class="btn btn--accent btn--block mt-2" style="grid-column:1/-1">Book Appointment <?= icon('arrow') ?></a>
   </div>
 </div>
 <?php

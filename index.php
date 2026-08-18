@@ -105,8 +105,8 @@ if ($route === '') {
       </div>
     </section>
 
-    <!-- TREATMENTS -->
-    <section class="section section--treatments" id="treatments">
+    <!-- TREATMENTS (RICH LUXURY SAPPHIRE SECTION) -->
+    <section class="section section--treatments-dark" id="treatments">
       <div class="container">
         <div class="section-head center reveal">
           <span class="eyebrow">Complete dental care</span>
@@ -124,7 +124,7 @@ if ($route === '') {
           ?>
         </div>
         <div class="text-center mt-7">
-          <a href="<?= url('dental-treatment-cost-delhi') ?>" class="btn btn--ghost btn--lg">View all treatments &amp; pricing <?= icon('arrow') ?></a>
+          <a href="<?= url('dental-treatment-cost-delhi') ?>" class="btn btn--accent btn--lg">View All Treatments &amp; Pricing <?= icon('arrow') ?></a>
         </div>
       </div>
     </section>
@@ -311,53 +311,64 @@ if ($route === '') {
       </div>
     </section>
 
-    <!-- VIDEO TESTIMONIALS -->
-    <section class="section section--videos-theme">
+    <!-- VIDEO TESTIMONIALS (CINEMA EXPERIENCE) -->
+    <section class="section section--videos-dark">
       <div class="container">
         <div class="section-head center reveal">
-          <span class="eyebrow">Video Stories</span>
+          <span class="eyebrow">Real Video Experiences</span>
           <h2>Putting Smiles Through: Patient Video Stories</h2>
-          <p class="lede">Watch real Vital Dental Care patients share their treatment journeys.</p>
+          <p class="lede">Watch authentic patients share their treatment journeys at Vital Dental Care.</p>
         </div>
         <div class="grid grid-4">
           <a href="https://youtu.be/PiMgnnFbbUc" target="_blank" rel="noopener" class="video-card reveal">
             <div class="video-thumb">
               <img src="<?= e(imageData('video_thumb_1')) ?>" alt="Patient Video Review" loading="lazy">
+              <span class="video-badge-pill">★ Real Patient</span>
               <span class="play-btn-overlay"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
             </div>
             <div class="video-info">
-              <h4>Patient Experience</h4>
-              <p>Painless Root Canal &amp; Restorations</p>
+              <span class="video-tag">Root Canal &amp; Restorations</span>
+              <h4>Painless Treatment Experience</h4>
+              <span class="video-watch-link">Watch Story <?= icon('arrow') ?></span>
             </div>
           </a>
+
           <a href="https://www.youtube.com/watch?v=R2tT_QuQKcU" target="_blank" rel="noopener" class="video-card reveal reveal-delay-1">
             <div class="video-thumb">
               <img src="<?= e(imageData('video_thumb_2')) ?>" alt="Patient Video Review" loading="lazy">
+              <span class="video-badge-pill">★ Real Patient</span>
               <span class="play-btn-overlay"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
             </div>
             <div class="video-info">
-              <h4>Dental Implants Story</h4>
-              <p>Smooth, surgical precision treatment</p>
+              <span class="video-tag">Dental Implants</span>
+              <h4>Full Mouth Implant Journey</h4>
+              <span class="video-watch-link">Watch Story <?= icon('arrow') ?></span>
             </div>
           </a>
+
           <a href="https://youtu.be/VIrfRHIElyY" target="_blank" rel="noopener" class="video-card reveal reveal-delay-2">
             <div class="video-thumb">
               <img src="<?= e(imageData('video_thumb_3')) ?>" alt="Patient Video Review" loading="lazy">
+              <span class="video-badge-pill">★ Real Patient</span>
               <span class="play-btn-overlay"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
             </div>
             <div class="video-info">
-              <h4>Orthodontic Journey</h4>
-              <p>Braces &amp; Clear Aligner confidence</p>
+              <span class="video-tag">Clear Aligners</span>
+              <h4>Orthodontic Smile Confidence</h4>
+              <span class="video-watch-link">Watch Story <?= icon('arrow') ?></span>
             </div>
           </a>
+
           <a href="https://www.youtube.com/watch?v=SU2ruo1Mi-g" target="_blank" rel="noopener" class="video-card reveal reveal-delay-3">
             <div class="video-thumb">
               <img src="<?= e(imageData('video_thumb_4')) ?>" alt="Patient Video Review" loading="lazy">
+              <span class="video-badge-pill">★ Real Patient</span>
               <span class="play-btn-overlay"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
             </div>
             <div class="video-info">
-              <h4>Smile Makeover</h4>
-              <p>Complete aesthetic smile transformation</p>
+              <span class="video-tag">Smile Makeover</span>
+              <h4>Aesthetic Transformation</h4>
+              <span class="video-watch-link">Watch Story <?= icon('arrow') ?></span>
             </div>
           </a>
         </div>
@@ -1174,53 +1185,64 @@ if ($route === 'patient-reviews') {
         </div>
       </section>
 
-      <!-- VIDEO STORIES -->
-      <section class="section section--videos-theme">
+      <!-- VIDEO STORIES (CINEMA EXPERIENCE) -->
+      <section class="section section--videos-dark">
         <div class="container">
           <div class="section-head center reveal">
-            <span class="eyebrow">Video Stories</span>
-            <h2>Patient Video Journeys</h2>
-            <p class="lede">Watch authentic patient video reviews from our clinics.</p>
+            <span class="eyebrow">Real Video Experiences</span>
+            <h2>Putting Smiles Through: Patient Video Stories</h2>
+            <p class="lede">Watch authentic patients share their treatment journeys at Vital Dental Care.</p>
           </div>
           <div class="grid grid-4">
             <a href="https://youtu.be/PiMgnnFbbUc" target="_blank" rel="noopener" class="video-card reveal">
               <div class="video-thumb">
                 <img src="<?= e(imageData('video_thumb_1')) ?>" alt="Patient Video Review" loading="lazy">
+                <span class="video-badge-pill">★ Real Patient</span>
                 <span class="play-btn-overlay"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
               </div>
               <div class="video-info">
-                <h4>Patient Experience</h4>
-                <p>Painless Root Canal &amp; Restorations</p>
+                <span class="video-tag">Root Canal &amp; Restorations</span>
+                <h4>Painless Treatment Experience</h4>
+                <span class="video-watch-link">Watch Story <?= icon('arrow') ?></span>
               </div>
             </a>
+
             <a href="https://www.youtube.com/watch?v=R2tT_QuQKcU" target="_blank" rel="noopener" class="video-card reveal reveal-delay-1">
               <div class="video-thumb">
                 <img src="<?= e(imageData('video_thumb_2')) ?>" alt="Patient Video Review" loading="lazy">
+                <span class="video-badge-pill">★ Real Patient</span>
                 <span class="play-btn-overlay"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
               </div>
               <div class="video-info">
-                <h4>Dental Implants Story</h4>
-                <p>Smooth, surgical precision treatment</p>
+                <span class="video-tag">Dental Implants</span>
+                <h4>Full Mouth Implant Journey</h4>
+                <span class="video-watch-link">Watch Story <?= icon('arrow') ?></span>
               </div>
             </a>
+
             <a href="https://youtu.be/VIrfRHIElyY" target="_blank" rel="noopener" class="video-card reveal reveal-delay-2">
               <div class="video-thumb">
                 <img src="<?= e(imageData('video_thumb_3')) ?>" alt="Patient Video Review" loading="lazy">
+                <span class="video-badge-pill">★ Real Patient</span>
                 <span class="play-btn-overlay"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
               </div>
               <div class="video-info">
-                <h4>Orthodontic Journey</h4>
-                <p>Braces &amp; Clear Aligner confidence</p>
+                <span class="video-tag">Clear Aligners</span>
+                <h4>Orthodontic Smile Confidence</h4>
+                <span class="video-watch-link">Watch Story <?= icon('arrow') ?></span>
               </div>
             </a>
+
             <a href="https://www.youtube.com/watch?v=SU2ruo1Mi-g" target="_blank" rel="noopener" class="video-card reveal reveal-delay-3">
               <div class="video-thumb">
                 <img src="<?= e(imageData('video_thumb_4')) ?>" alt="Patient Video Review" loading="lazy">
+                <span class="video-badge-pill">★ Real Patient</span>
                 <span class="play-btn-overlay"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
               </div>
               <div class="video-info">
-                <h4>Smile Makeover</h4>
-                <p>Complete aesthetic smile transformation</p>
+                <span class="video-tag">Smile Makeover</span>
+                <h4>Aesthetic Transformation</h4>
+                <span class="video-watch-link">Watch Story <?= icon('arrow') ?></span>
               </div>
             </a>
           </div>
