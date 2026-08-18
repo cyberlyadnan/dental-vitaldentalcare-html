@@ -1,0 +1,20 @@
+# Vital Dental Care — Apache Configuration
+
+<IfModule mod_mime.c>
+  AddType image/svg+xml .svg .svgz
+  AddType image/webp .webp
+  AddType application/javascript .js
+  AddType text/css .css
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Pass existing files and directories directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Route friendly URLs to index.php
+  RewriteRule ^(.*)$ index.php?route=$1 [QSA,L]
+</IfModule>
